@@ -4,27 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <link rel="stylesheet" href="./src/styles/chart.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basecoat-css@0.3.11/dist/basecoat.cdn.min.css">
     <script src="https://cdn.jsdelivr.net/npm/basecoat-css@0.3.11/dist/js/all.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
-    <div>
-        <canvas id="bar-chart"></canvas>
-    </div>
-    <div>
-        <canvas id="polar-chart"></canvas>
-    </div>
-    <div>
-        <canvas id="radar-chart"></canvas>
-    </div>
-    <div>
-        <canvas id="pie-chart"></canvas>
+    <h1 class="text-lg font-bold mb-4">Dashboard Paulistão</h1>
+
+    <div class="grid grid-rows-2 grid-cols-2 gap-6 mt-12 flex-wrap">
+        <div class="flex flex-wrap gap-6">
+            <div class="card">
+                <header>
+                    <h2>Is this an image?</h2>
+                    <p>This is a card with an image.</p>
+                </header>
+                <section class="px-0">
+                    <div class="chart-size">
+                        <canvas
+                        alt="Graph showing the number of goals scored by each team in the last 10 matches."
+                        loading="lazy"
+                        class="" style="color:transparent"
+                        id="bar-chart">
+                        </canvas>
+                    </div>
+                </section>
+            </div>
+    
+            <div class="card">
+                <header>
+                    <h2>Is this an image?</h2>
+                    <p>This is a card with an image.</p>
+                </header>
+                <section class="px-0">
+                    <div class="chart-size">
+                        <canvas
+                        alt="Graph showing the number of goals scored by each team in the last 10 matches."
+                        loading="lazy"
+                        class="" style="color:transparent"
+                        id="polar-chart">
+                        </canvas>
+                    </div>
+                </section>
+            </div>
+    
+            <div class="card">
+                <header>
+                    <h2>Is this an image?</h2>
+                    <p>This is a card with an image.</p>
+                </header>
+                <section class="px-0">
+                    <div class="chart-size">
+                        <canvas
+                        alt="Graph showing the number of goals scored by each team in the last 10 matches."
+                        loading="lazy"
+                        class="" style="color:transparent"
+                        id="radar-chart">
+                        </canvas>
+                    </div>
+                </section>
+            </div>
+    
+            <div class="card">
+                <header>
+                    <h2>Is this an image?</h2>
+                    <p>This is a card with an image.</p>
+                </header>
+                <section class="px-0">
+                    <div class="chart-size">
+                        <canvas
+                        alt="Graph showing the number of goals scored by each team in the last 10 matches."
+                        loading="lazy"
+                        class="" style="color:transparent"
+                        id="pie-chart">
+                        </canvas>
+                    </div>
+                </section>
+            </div>
+        </div>
     </div>
 
     <script type="module" src="./src/scripts/charts/config.js"></script>
-    <script src="/js/basecoat/basecoat.min.js" defer></script>
-    <script src="/js/basecoat/tabs.min.js" defer></script>
+
 </body>
 </html>

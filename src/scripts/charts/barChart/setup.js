@@ -1,5 +1,5 @@
 export function setupBarChart() { 
-    const labels = Utils.months({count: 7});
+    const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
     const data = {
         labels: labels,
         datasets: [{
