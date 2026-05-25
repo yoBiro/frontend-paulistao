@@ -1,15 +1,10 @@
-export function setupPolarChart() {
+export function setupPolarChart(dataGoals) {
+    const labels = dataGoals.teams;
     const data = {
-    labels: [
-        'Red',
-        'Green',
-        'Yellow',
-        'Grey',
-        'Blue'
-    ],
+    labels: labels,
     datasets: [{
         label: 'My First Dataset',
-        data: [11, 16, 7, 3, 14],
+        data: dataGoals.goals,
         backgroundColor: [
         'rgb(255, 99, 132)',
         'rgb(75, 192, 192)',

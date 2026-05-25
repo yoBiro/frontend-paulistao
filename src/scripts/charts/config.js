@@ -3,8 +3,14 @@ import { setupPieChart } from "./pieChart/setup.js";
 import { setupPolarChart } from "./polarChart/setup.js";
 import { setupRadarChart } from "./radarChart/setup.js";
 
-let configBar = setupBarChart();
-let configPolar = setupPolarChart();
+import { getRanking8Teams } from "../../api/rankingApi.js";
+import { getGoalsStats } from "../../api/goalsStats.js";
+
+const dataRanking = await getRanking8Teams();
+const dataGoals = await getGoalsStats();
+
+let configBar = setupBarChart(dataRanking);
+let configPolar = setupPolarChart(dataGoals);
 let configRadar = setupRadarChart();
 let configPie = setupPieChart();
 
