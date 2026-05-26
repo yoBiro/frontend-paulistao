@@ -5,14 +5,16 @@ import { setupRadarChart } from "./radarChart/setup.js";
 
 import { getRanking8Teams } from "../../api/rankingApi.js";
 import { getGoalsStats } from "../../api/goalsStats.js";
+import { getWinsRanking } from "../../api/winStats.js";
 
 const dataRanking = await getRanking8Teams();
 const dataGoals = await getGoalsStats();
+const dataWins = await getWinsRanking();
 
 let configBar = setupBarChart(dataRanking);
 let configPolar = setupPolarChart(dataGoals);
 let configRadar = setupRadarChart();
-let configPie = setupPieChart();
+let configPie = setupPieChart(dataWins);
 
 const ctx1 = document.getElementById('bar-chart');
 const ctx2 = document.getElementById('polar-chart');
